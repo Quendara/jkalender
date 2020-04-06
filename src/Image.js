@@ -12,7 +12,7 @@ export const Image = props => {
 
   return (
     <>
-      <img src={getSrc()} />
+      <img src={getSrc()} className="mid-height" />
       
     </>
   );

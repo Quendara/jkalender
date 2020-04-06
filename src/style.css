@@ -5,19 +5,19 @@ body
   color: #fff;
 }
 
-img {
-  
-  height: 100%;  
-  padding-left: 2%;
-  padding-right: 2%;
-  }
 
-div {  
-  padding: 10px;
+
+div {     
   font-size: 1.2em;
   vertical-align: middle;
   text-align: center;
-  hor-align: center;
+   
 }
 
-.mid-height{ height: 120px }
+.mid-height{    
+  height: 21vh; 
+  margin-top: 4vh;
+  padding-left: 2%;
+  padding-right: 2%; 
+  text-align: center;
+  }
