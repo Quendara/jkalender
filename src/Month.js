@@ -1,5 +1,16 @@
 import React from 'react';
+import Settings from "./Settings"
 
 export const Month = ( m ) => { 
-  return ( <img src="/assets/img/0.jpg" />)
+
+  const getSrc = () => {
+      return Settings.baseS3Bucket + '0.jpg'
+  }
+
+  return ( <p>
+  <img src="{ getSrc  } " />
+  { getSrc( ) }
+  
+  </p>
+  )
 }
