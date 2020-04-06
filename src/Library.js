@@ -11,6 +11,9 @@ export const Library = props => {
       <br />
       <p>Library </p>
       <hr />
+      <Image prefix="" value="0" />
+      <Image value="6" />
+      <hr />
       <Image value="2" />
       <Image value="0" />
       <Image value="1" />

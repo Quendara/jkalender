@@ -7,16 +7,17 @@ body
 
 img {
   
-  height: 250px;  
+  height: 100%;  
   padding-left: 2%;
   padding-right: 2%;
   }
 
 div {  
-  
-  font-size: 1.4em;
+  padding: 10px;
+  font-size: 1.2em;
   vertical-align: middle;
   text-align: center;
   hor-align: center;
 }
 
+.mid-height{ height: 120px }
