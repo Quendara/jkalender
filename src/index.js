@@ -1,13 +1,33 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { render } from "react-dom";
-import { Month } from "./Month";
+import { Image } from "./Image";
+import { Library } from "./Library";
 import "./style.css";
 
 const App = () => {
+  const date = new Date();
+  const day = date.getDay();
+  const month = date.getMonth();
+  const dayMonth = date.getDate();
+  const year = date.getFullYear();
+
   return (
     <div>
-      <p>Start editing to see some magic happen :)</p>
-      <Month />
+      <div>Jonnas Kalender </div>
+
+      <div>        
+        {dayMonth}.        
+        {year}
+      </div>
+      <div>
+        <Image prefix="d" value={day} />        
+        <Image prefix="m" value={month} />
+      </div>
+      <div>
+        <Image prefix="zeit" value="f" />        
+        
+      </div>
+
     </div>
   );
 };

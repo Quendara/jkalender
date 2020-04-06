@@ -5,6 +5,18 @@ body
   color: #fff;
 }
 
-h1, p {
+img {
   
+  height: 250px;  
+  padding-left: 2%;
+  padding-right: 2%;
+  }
+
+div {  
+  
+  font-size: 1.4em;
+  vertical-align: middle;
+  text-align: center;
+  hor-align: center;
 }
+
