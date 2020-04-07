@@ -2,14 +2,11 @@ import React, { Component, useState } from "react";
 import { render } from "react-dom";
 import { Image } from "./Image";
 import { Library } from "./Library";
+import { getRandomInt, ensureMinMax, leadingZero, digit } from "./utils"
 import "./style.css";
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max - 1)) + 2;
-}
-
 let daynames = [
-  "Montag",
+  "Montag", // 0
   "Dienstag",
   "Mittwoch",
   "Donnerstag",
@@ -21,31 +18,17 @@ let daynames = [
 const App = () => {
   const date = new Date();
 
+  const randCal = () => {
+    setDay(getRandomInt(7));
+    setMonth(ensureMinMax(month + 1, 1, 12));
+    setDayMonth(leadingZero(ensureMinMax(getRandomInt(31), 1, 31), 2));
+  };
+
   useState();
   const [day, setDay] = useState(date.getDay());
   const [dayMonth, setDayMonth] = useState(leadingZero(date.getDate(), 2));
   const [month, setMonth] = useState(date.getMonth() + 1);
   const [year, setYear] = useState(date.getFullYear());
-
-  const randCal = () => {
-    setDay(getRandomInt(7));
-    setMonth((month + 1) % 11);
-    setDayMonth(leadingZero(getRandomInt(31), 2));
-  };
-
-  function leadingZero(num, size) {
-    var s = num + "";
-    while (s.length < size) s = "0" + s;
-    return s;
-  }
-
-  const digit = (value, digit) => {
-    let ret = "" + value;
-    return ret[digit];
-  };
-
-  // <!--<Image prefix="" value={digit(dayMonth, 0)} />
-  //           <Image value={digit(dayMonth, 1)} />-->
 
   return (
     <div>
@@ -54,14 +37,15 @@ const App = () => {
           <div className="title">Jonna's Kalender</div>
           <div className="subTitle">
             Das man auch in Corona zeiten nicht das Datum vergisst ;)
-            <br/><br/>
+            <br />
+            <br />
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-6  mid-height">
           <Image prefix="d" value="ays" className="absolute" />
-          <h1 className="absoluteText"> {daynames[day - 1]} </h1>
+          <h1 className="absoluteTextDay"> {daynames[day - 1]} </h1>
         </div>
         <div className="col-6  mid-height">
           <Image prefix="" value={digit(dayMonth, 0)} />
@@ -82,8 +66,9 @@ const App = () => {
             Blumenduft weht um die Nase, bald kommt schon der Osterhase.{" "}
           </p>
         </div>
-        <div className="col-6  mid-height">
+        <div className="col-6  mid-height absolute">
           <Image prefix="" value="2020" />
+          <h1 className="absoluteTextYear"> {year} </h1>
         </div>
       </div>
     </div>
