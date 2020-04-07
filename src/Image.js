@@ -3,7 +3,7 @@ import Settings from "./Settings";
 
 export const Image = props => {
   const getSrc = () => {
-    const prefix = "";
+    let prefix = "";
     if (props.prefix) {
       prefix = props.prefix;
     }

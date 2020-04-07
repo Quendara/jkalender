@@ -63,7 +63,7 @@ const App = () => {
         <div className="col-6  mid-height bg-success" >
         </div>
         <div className="col-6  mid-height">
-          <Image prefix="zeit" value="f" />
+          <Image prefix="zeit" value="f" /> 
         </div>
       </div>
     </div>
