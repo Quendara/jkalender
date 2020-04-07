@@ -1,9 +1,12 @@
 body
 {
-  font-family: Lato;
+  
   background-color: #000;
   color: #fff;
+  
 }
+
+
 
 
 
@@ -14,6 +17,18 @@ div {
    
 }
 
+.spruch {
+  color:#29FFB8;
+  font-family: 'Indie Flower' 
+   
+}
+
+.subTitle{
+  color:#29FFB8;
+  font-size: 1.1em;
+  font-family: 'Indie Flower' 
+}
+
 .mid-height{    
   height: 21vh; 
   margin-top: 4vh;
@@ -21,3 +36,18 @@ div {
   padding-right: 2%; 
   text-align: center;
   }
+
+.absolute{
+  position: absolute; 
+  top:0px
+}
+
+.absoluteText{
+  font-size: 1.1em;
+  font-weight: bold;
+  position: absolute; 
+  top:30px;
+  left: 40px;
+  color:#25E8DE;
+
+}

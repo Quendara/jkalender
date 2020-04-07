@@ -15,6 +15,6 @@ export const Image = props => {
       <img src={getSrc()} className="mid-height" />
       
     </>
-  );
+  ); 
   // prefix
 };
