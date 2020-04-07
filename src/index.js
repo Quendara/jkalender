@@ -57,7 +57,7 @@ const App = () => {
         <div className="col-6  mid-height">
           <Image prefix="" value="2020" />
         </div>
-        <div className="col-6  "> <p className="mid-height" > Corona, wir schaffen das ;) </p></div>
+        <div className="col-6  "> <p className="mid-height" ><br /> Corona, wir schaffen das ;) </p></div>
       </div>
       <div className="row">
         <div className="col-6  mid-height bg-success" >
