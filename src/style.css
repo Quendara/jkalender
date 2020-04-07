@@ -3,30 +3,33 @@ body
   
   background-color: #000;
   color: #fff;
-  
 }
 
-
-
-
-
 div {     
-  font-size: 1.2em;
+ 
   vertical-align: middle;
   text-align: center;
    
 }
 
-.spruch {
-  color:#29FFB8;
+.title{
+  color:#34A6BF;
+  font-size: 2.2em;
+  font-weight: bold;
   font-family: 'Indie Flower' 
-   
 }
 
 .subTitle{
-  color:#29FFB8;
-  font-size: 1.1em;
+  color:#EF41EA;
+  font-size: 1.7em;
   font-family: 'Indie Flower' 
+}
+
+.spruch {
+  color:#EF41EA;
+  font-family: 'Indie Flower' ;
+  font-size: 1.7em;
+   
 }
 
 .mid-height{    
@@ -38,16 +41,17 @@ div {
   }
 
 .absolute{
+  
   position: absolute; 
   top:0px
 }
 
 .absoluteText{
-  font-size: 1.1em;
+  font-size: 3em;
   font-weight: bold;
   position: absolute; 
-  top:30px;
+  top: 40px;
   left: 40px;
-  color:#25E8DE;
+  color:#A4E8B3;
 
 }

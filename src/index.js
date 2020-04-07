@@ -9,18 +9,20 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max - 1)) + 2;
 }
 
+let daynames = [ 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag','Samstag', 'Sonntag' ]
+
 const App = () => {
   const date = new Date();
 
   useState();
-  const [day, setDay] = useState( 2 );
+  const [day, setDay] = useState( date.getDay() );
   const [dayMonth, setDayMonth] = useState( leadingZero( date.getDate(),2 ));
   const [month, setMonth] = useState(date.getMonth() + 1 );
   const [year, setYear] = useState(date.getFullYear());
 
   const randCal = () => {
     setDay(getRandomInt(7));
-    setMonth(getRandomInt(7));
+    setMonth( (( month + 1 ) % 11 )  );
     setDayMonth( leadingZero( getRandomInt( 31 ), 2) );
   };
 
@@ -41,15 +43,14 @@ const App = () => {
   return (
     <div>
       <div onClick={() => randCal()}>
-        <b>Jonna's Kalender</b><br />
-        <small className="subTitle">Das man auch in Corona zeiten nicht das Datum vergisst ;)</small>
-   
+        <div className="title">Jonna's Kalender</div>
+        <div className="subTitle">Das man auch in Corona zeiten nicht das Datum vergisst ;)</div>
       </div>
       <div className="row">
         <div className="col-6  mid-height" >
           
           <Image prefix="d" value="ays"className="absolute" />
-          <h1 className="absoluteText" >Dienstag </h1>
+          <h1 className="absoluteText" > { daynames[ day-1 ] } </h1>
           
         </div>
         <div className="col-6  mid-height">
