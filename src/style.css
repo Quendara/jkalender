@@ -13,22 +13,34 @@ div {
 
 .subTitle{
   color:#EF41EA;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-family: 'Indie Flower' 
 }
 
 .spruch {
   color:#EF41EA;
   font-family: 'Indie Flower' ;
-  font-size: 1.7em;
+  font-size: 1.4em;
    
 }
 
 .mid-height{    
   height: 19vh; 
-  margin-bottom: 4vh;
+  margin-bottom: 6vh;
+}
+
+.container {
+  background-color: red;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+}
+
+.image{
+  max-height:17vh;
   padding-left: 2%;
-  padding-right: 2%; 
+  padding-right: 2%;   
+
 }
 
 .absolute {
@@ -38,7 +50,7 @@ div {
 }
 
 .absoluteTextDay{
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   position: absolute; 
   top: 10px;
@@ -47,11 +59,11 @@ div {
 }
 
 .absoluteTextYear{
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: bold;
   position: absolute; 
   top: 10px;
-  left: 40px;
+  left: 50px;
   color:#B8AEBE;
 
 }
