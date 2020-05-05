@@ -61,7 +61,7 @@ const App = () => {
 
         <div className="col-6 col-sm-4 mid-height ">
           <p className="mid-height spruch ">
-            Blumenduft weht um die Nase, bald kommt schon der Osterhase.{" "}
+            Träume nicht dein Leben sondern, lebe deine Träume 
           </p>
         </div>
         <div className="col-6 col-sm-4  mid-height ">
